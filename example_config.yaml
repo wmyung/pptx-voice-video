@@ -1,0 +1,42 @@
+tts:
+  engine: voxcpm
+  voxcpm:
+    model_id: openbmb/VoxCPM2
+    sample_rate: 48000
+    max_chunk_chars: 260
+    load_denoiser: false
+    cfg_value: 2.0
+    inference_timesteps: 10
+    voice_control: null
+    prompt_text: null
+    generation: {}
+
+text:
+  language: ko
+  strip_stage_directions: true
+  pronunciation:
+    GWAS: 지워스
+    SNP: 스닙
+    PRS: 피 알 에스
+    LD: 엘 디
+    eQTL: 이 큐 티 엘
+    APOE: 아포이
+
+render:
+  backend: libreoffice
+  width: 1920
+  height: 1080
+
+video:
+  fps: 30
+  width: 1920
+  height: 1080
+  preserve_slide_aspect_ratio: true
+  slide_padding_seconds: 0.35
+  fade_seconds: 0.25
+  subtitles: false
+
+pointer:
+  enabled: false
+  mode: auto
+  move_seconds: 0.8

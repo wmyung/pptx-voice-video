@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pptx-voice-video"
+version = "3.0.0"
+description = "Local PPTX presenter notes to narrated MP4 using pluggable GPU TTS backends"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+dependencies = [
+  "click>=8.1",
+  "pydantic>=2.6",
+  "PyYAML>=6.0",
+  "python-pptx>=0.6.23",
+  "Pillow>=10.0",
+  "numpy>=1.24",
+  "soundfile>=0.12",
+  "librosa>=0.10",
+  "transformers>=4.52",
+  "accelerate>=0.30",
+  "huggingface-hub>=0.23",
+  "torch>=2.2",
+  "torchaudio>=2.2",
+  "gradio>=4.0",
+  "rich>=13.0",
+  "voxcpm",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+pptx-voice-video = "pptx_voice_video.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

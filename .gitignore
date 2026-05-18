@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+
+# Environment / secrets
+.env
+*.env
+!.env.example
+
+# Generated media and local inputs
+sample_inputs/
+sample_outputs/
+outputs/
+downloads/
+*.mp4
+*.wav
+*.m4a
+*.mp3
+*.tar
+*.tar.gz
+*.zip
+
+# Local model/cache artifacts
+.cache/
+models/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/

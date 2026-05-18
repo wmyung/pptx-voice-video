@@ -1,0 +1,5 @@
+# Optional: use real recorded narration for selected slides instead of TTS.
+# Paths are relative to this YAML file, or absolute paths.
+slides:
+  24: recordings/slide_024.m4a
+  27: recordings/slide_027.wav
